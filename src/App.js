@@ -51,16 +51,26 @@ function App() {
     setProducts(parsedData);
   };
 
-  const handleSort = () => {
-    console.log(products);
-    products.sort(function (a, b) {
-      const keyA = a.Price;
-      const keyB = b.Price;
-      if (keyA < keyB) return -1;
-      if (keyA > keyB) return 1;
+  const handleSortLowToHigh = () => {
+    const initProducts = products;
+
+    initProducts.sort(function (a, b) {
+      if (a["Price"] < b["Price"]) return -1;
+      if (a["Price"] > b["Price"]) return 1;
       return 0;
     });
-    setProducts(products);
+    setProducts(initProducts);
+  };
+
+  const handleSortHighToLow = () => {
+    const initProducts = products;
+
+    initProducts.sort(function (a, b) {
+      if (a["Price"] > b["Price"]) return -1;
+      if (a["Price"] < b["Price"]) return 1;
+      return 0;
+    });
+    setProducts(initProducts);
   };
 
   return (
@@ -74,8 +84,8 @@ function App() {
       />
       <main>
         <div className="sort-container">
-          <button onClick={handleSort}>Sort : High to Low</button>
-          <button>Sort : Low to High</button>
+          <button onClick={handleSortHighToLow}>Sort : High to Low</button>
+          <button onClick={handleSortLowToHigh}>Sort : Low to High</button>
         </div>
         {products && <Products products={products} />}
       </main>
