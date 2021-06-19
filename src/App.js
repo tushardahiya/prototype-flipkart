@@ -17,7 +17,7 @@ function App() {
       console.log("parsedData:", parsedData);
       setProducts(parsedData);
     } else {
-      const updatedProducts = products.filter(
+      const updatedProducts = parsedData.filter(
         (product) => product.Size === value
       );
       setProducts(updatedProducts);
@@ -28,7 +28,7 @@ function App() {
     if (value === "none") {
       setProducts(parsedData);
     } else {
-      const updatedProducts = products.filter(
+      const updatedProducts = parsedData.filter(
         (product) => product.Brand === value
       );
       setProducts(updatedProducts);
@@ -39,7 +39,7 @@ function App() {
     if (value === "none") {
       setProducts(parsedData);
     } else {
-      const updatedProducts = products.filter(
+      const updatedProducts = parsedData.filter(
         (product) => product.Sex === value
       );
       setProducts(updatedProducts);
