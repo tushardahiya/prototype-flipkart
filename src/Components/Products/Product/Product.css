@@ -1,0 +1,38 @@
+.product-container {
+  margin: 2px;
+  width: 250px;
+  height: 280px;
+  background-color: white;
+}
+
+.product-container img {
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  height: 150px;
+}
+
+.product-container .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-container p {
+  margin: 1px;
+}
+
+.product-container .description {
+  text-align: center;
+}
+
+.product-container .product-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-info h6 {
+  border: 1px solid grey;
+  padding: 4px;
+  border-radius: 3px;
+}

@@ -1,5 +1,32 @@
 .navbar-container {
+  background-color: #4361ee;
+  position: fixed;
+  top: 0;
+  color: white;
   width: 100%;
-  border: 1px solid black;
   height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container .heading {
+  margin: 20px;
+}
+
+.navbar-container input {
+  width: 40%;
+  height: 50%;
+  border-radius: 10px;
+  border: none;
+}
+
+.navbar-container .signin {
+  margin-right: 30px;
+  height: 70%;
+  background-color: #3f37c9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }

@@ -1,6 +1,18 @@
 .sidebar-container {
   position: fixed;
-  width: 150px;
+  z-index: 1;
+  top: 10vh;
+  width: 250px;
   height: 90vh;
-  border: 1px solid black;
+}
+
+.sidebar-container select,
+button {
+  cursor: pointer;
+}
+
+.sidebar-container .filter-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
 }

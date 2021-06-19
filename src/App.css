@@ -1,3 +1,26 @@
 main {
-  margin-left: 150px;
+  margin-top: 10vh;
+  margin-left: 250px;
+  height: 90vh;
+}
+
+main .sort-container {
+  height: 50px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+
+.sort-container button {
+  cursor: pointer;
+  height: 70%;
+  margin: 5px;
+  border: none;
+  background-color: #3f37c9;
+  color: white;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #e9edc9;
 }
