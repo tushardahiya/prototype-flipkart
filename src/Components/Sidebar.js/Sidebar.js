@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Sidebar.css";
 
 const Sidebar = ({ byBrand, bySex, bySize, resetAllFilters }) => {
@@ -17,6 +17,7 @@ const Sidebar = ({ byBrand, bySex, bySize, resetAllFilters }) => {
       <div className="filter-container">
         <label>FILTER BY SIZE</label>
         <select onChange={(e) => handleChange(e, "size")} name="size">
+          <option value="none">None</option>
           <option value="S">S</option>
           <option value="M">M</option>
           <option value="L">L</option>
@@ -26,6 +27,7 @@ const Sidebar = ({ byBrand, bySex, bySize, resetAllFilters }) => {
       <div className="filter-container">
         <label>FILTER BY BRAND</label>
         <select onChange={(e) => handleChange(e, "brand")} name="brand">
+          <option value="none">None</option>
           <option value="nike">NIKE</option>
           <option value="reebok">REEBOK</option>
           <option value="woodland">WOODLAND</option>
@@ -35,6 +37,7 @@ const Sidebar = ({ byBrand, bySex, bySize, resetAllFilters }) => {
       <div className="filter-container">
         <label>FILTER BY Sex</label>
         <select onChange={(e) => handleChange(e, "sex")} name="idealfor">
+          <option value="none">None</option>
           <option value="Men">men</option>
           <option value="Women">women</option>
         </select>

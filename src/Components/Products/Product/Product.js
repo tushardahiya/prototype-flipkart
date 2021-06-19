@@ -2,7 +2,6 @@ import React from "react";
 import "./Product.css";
 
 const Product = ({ details }) => {
-  console.log(details);
   return (
     <div className="product-container">
       <div className="title">

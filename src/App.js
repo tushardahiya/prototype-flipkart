@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar.js/Navbar";
 import Products from "./Components/Products/Products";
@@ -13,28 +13,54 @@ function App() {
   const [products, setProducts] = useState(parsedData);
 
   const filterBySize = (value) => {
-    const updatedProducts = parsedData.filter(
-      (product) => product.Size === value
-    );
-    setProducts(updatedProducts);
+    if (value === "none") {
+      console.log("products:", products);
+      console.log("parsedData:", parsedData);
+      setProducts(parsedData);
+    } else {
+      const updatedProducts = products.filter(
+        (product) => product.Size === value
+      );
+      setProducts(updatedProducts);
+    }
   };
 
   const filterByBrand = (value) => {
-    const updatedProducts = parsedData.filter(
-      (product) => product.Brand === value
-    );
-    setProducts(updatedProducts);
+    if (value === "none") {
+      setProducts(parsedData);
+    } else {
+      const updatedProducts = products.filter(
+        (product) => product.Brand === value
+      );
+      setProducts(updatedProducts);
+    }
   };
 
   const filterBySex = (value) => {
-    const updatedProducts = parsedData.filter(
-      (product) => product.Sex === value
-    );
-    setProducts(updatedProducts);
+    if (value === "none") {
+      setProducts(parsedData);
+    } else {
+      const updatedProducts = products.filter(
+        (product) => product.Sex === value
+      );
+      setProducts(updatedProducts);
+    }
   };
 
   const resetFilters = () => {
     setProducts(parsedData);
+  };
+
+  const handleSort = () => {
+    console.log(products);
+    products.sort(function (a, b) {
+      const keyA = a.Price;
+      const keyB = b.Price;
+      if (keyA < keyB) return -1;
+      if (keyA > keyB) return 1;
+      return 0;
+    });
+    setProducts(products);
   };
 
   return (
@@ -48,7 +74,7 @@ function App() {
       />
       <main>
         <div className="sort-container">
-          <button>Sort : High to Low</button>
+          <button onClick={handleSort}>Sort : High to Low</button>
           <button>Sort : Low to High</button>
         </div>
         {products && <Products products={products} />}

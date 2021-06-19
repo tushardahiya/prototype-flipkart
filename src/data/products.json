@@ -5,7 +5,7 @@
       "img": "https://static.turbosquid.com/Preview/2017/02/03__12_34_22/Nike_tShirt.jpgE341C7DC-4769-4BE0-9827-AF0F6A3D7C12Large.jpg",
       "Title": "TSHIRT",
       "Description": "THIS IS BLACK NIKE TSHIRT",
-      "Price":"500",
+      "Price":500,
       "Brand":"nike",
       "Sex":"Men"
     },
@@ -15,7 +15,7 @@
       "img": "https://images-na.ssl-images-amazon.com/images/I/81hkyJrooeL._UL1500_.jpg",
       "Title": "JEANS",
       "Description": "BLUE REEBOK JEANS",
-      "Price":"600",
+      "Price":600,
       "Brand":"reebok",
       "Sex":"Men"
     },
@@ -25,7 +25,7 @@
       "img": "https://5.imimg.com/data5/JJ/OL/GLADMIN-61506427/women-ljc-96-black-500x500.png",
       "Title": "JACKET",
       "Description": "BLACK WOODLAND JACKET",
-      "Price":"200",
+      "Price":200,
       "Brand":"woodland",
       "Sex":"Women"
     },
@@ -35,7 +35,7 @@
       "img": "https://i.pinimg.com/originals/47/82/c9/4782c960460d3566f1349bae14c576b4.jpg",
       "Title": "SHIRT",
       "Description": "THIS IS REEBOK SHIRT",
-      "Price":"1200",
+      "Price":1200,
       "Brand":"reebok",
       "Sex":"Women"
     },
@@ -45,7 +45,7 @@
       "img": "https://assets.ajio.com/medias/sys_master/root/h92/h2e/13498233913374/-1117Wx1400H-460399561-black-MODEL.jpg",
       "Title": "TROUSERS",
       "Description": "THESE ARE POLO TROUSERS",
-      "Price":"900",
+      "Price":900,
       "Brand":"polo",
       "Sex":"Women"
     },
@@ -55,7 +55,7 @@
       "img": "https://4.imimg.com/data4/RQ/LL/MY-10764091/mens-nike-hoodies-500x500.jpeg",
       "Title": "Sweatshirt",
       "Description": "THIS IS NIKE SWEATSHIRT",
-      "Price":"1100",
+      "Price":1100,
       "Brand":"nike",
       "Sex":"Men"
     }]
