@@ -11,7 +11,6 @@ const parsedData = JSON.parse(stringData);
 
 function App() {
   const [products, setProducts] = useState(parsedData);
-
   const filterBySize = (value) => {
     if (value === "none") {
       console.log("products:", products);
@@ -52,22 +51,20 @@ function App() {
   };
 
   const handleSortLowToHigh = () => {
-    const initProducts = products;
-
+    const initProducts = [...parsedData];
     initProducts.sort(function (a, b) {
-      if (a["Price"] < b["Price"]) return -1;
-      if (a["Price"] > b["Price"]) return 1;
+      if (a.Price < b.Price) return -1;
+      if (a.Price > b.Price) return 1;
       return 0;
     });
     setProducts(initProducts);
   };
 
   const handleSortHighToLow = () => {
-    const initProducts = products;
-
+    const initProducts = [...parsedData];
     initProducts.sort(function (a, b) {
-      if (a["Price"] > b["Price"]) return -1;
-      if (a["Price"] < b["Price"]) return 1;
+      if (a.Price > b.Price) return -1;
+      if (a.Price < b.Price) return 1;
       return 0;
     });
     setProducts(initProducts);
@@ -87,7 +84,7 @@ function App() {
           <button onClick={handleSortHighToLow}>Sort : High to Low</button>
           <button onClick={handleSortLowToHigh}>Sort : Low to High</button>
         </div>
-        {products && <Products products={products} />}
+        {products ? <Products products={products} /> : null}
       </main>
     </div>
   );
