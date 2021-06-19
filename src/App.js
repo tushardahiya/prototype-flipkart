@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./Components/Navbar.js/Navbar";
+import Products from "./Components/Products/Products";
+import Sidebar from "./Components/Sidebar.js/Sidebar";
+import Data from "./data/products.json";
+
+//gives me array of objects with each object being a product
+const string = JSON.stringify(Data);
+const data = JSON.parse(string);
+console.log(data);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Sidebar />
+      <main>
+        <div>details and sorting</div>
+        <Products />
+      </main>
     </div>
   );
 }
