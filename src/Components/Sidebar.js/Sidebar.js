@@ -1,15 +1,10 @@
 import React from "react";
 import "./Sidebar.css";
 
-const Sidebar = ({ byBrand, bySex, bySize, resetAllFilters }) => {
+const Sidebar = ({ addToFilter, resetAllFilters }) => {
   const handleChange = (e, type) => {
-    if (type === "size") {
-      bySize(e.target.value);
-    } else if (type === "brand") {
-      byBrand(e.target.value);
-    } else if (type === "sex") {
-      bySex(e.target.value);
-    }
+    console.log(e.target.value);
+    addToFilter(e.target.value, type);
   };
 
   return (
@@ -35,8 +30,8 @@ const Sidebar = ({ byBrand, bySex, bySize, resetAllFilters }) => {
         </select>
       </div>
       <div className="filter-container">
-        <label>FILTER BY Sex</label>
-        <select onChange={(e) => handleChange(e, "sex")} name="idealfor">
+        <label>FILTER BY GENDER</label>
+        <select onChange={(e) => handleChange(e, "gender")} name="idealfor">
           <option value="none">None</option>
           <option value="Men">men</option>
           <option value="Women">women</option>

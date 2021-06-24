@@ -7,7 +7,7 @@
       "Description": "THIS IS BLACK NIKE TSHIRT",
       "Price":500,
       "Brand":"nike",
-      "Sex":"Men"
+      "Gender":"Men"
     },
     {
       "Id": "2",
@@ -17,7 +17,7 @@
       "Description": "BLUE REEBOK JEANS",
       "Price":600,
       "Brand":"reebok",
-      "Sex":"Men"
+      "Gender":"Men"
     },
     {
       "Id": "3",
@@ -27,7 +27,7 @@
       "Description": "BLACK WOODLAND JACKET",
       "Price":200,
       "Brand":"woodland",
-      "Sex":"Women"
+      "Gender":"Women"
     },
     {
       "Id": "4",
@@ -37,7 +37,7 @@
       "Description": "THIS IS REEBOK SHIRT",
       "Price":1200,
       "Brand":"reebok",
-      "Sex":"Women"
+      "Gender":"Women"
     },
     {
       "Id": "5",
@@ -47,7 +47,7 @@
       "Description": "THESE ARE POLO TROUSERS",
       "Price":900,
       "Brand":"polo",
-      "Sex":"Women"
+      "Gender":"Women"
     },
     {
       "Id": "6",
@@ -57,5 +57,5 @@
       "Description": "THIS IS NIKE SWEATSHIRT",
       "Price":1100,
       "Brand":"nike",
-      "Sex":"Men"
+      "Gender":"Men"
     }]
