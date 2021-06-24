@@ -11,9 +11,7 @@ const parsedData = JSON.parse(stringData);
 
 function App() {
   const [products] = useState(parsedData);
-
   const [filteredProducts, setFilteredProducts] = useState(products);
-
   const [filters, setFilters] = useState({
     brand: [],
     size: [],
@@ -22,9 +20,11 @@ function App() {
 
   useEffect(() => {
     filterHandler();
-  }, [filters, filters.brand, filters.size, filters.gender]);
-
-  console.log(filters);
+  }, [
+    JSON.stringify(filters.brand),
+    JSON.stringify(filters.gender),
+    JSON.stringify(filters.size),
+  ]);
 
   // keeping track of all the changes in the filters
   const addToFiltersHandler = (value, type) => {
@@ -46,38 +46,27 @@ function App() {
   };
 
   const filterHandler = () => {
-    let array = [...filteredProducts];
-    if (
-      filters.size.length === 0 &&
-      filters.brand.length === 0 &&
-      filters.gender.length === 0
-    ) {
-      setFilteredProducts(products);
-    }
-    if (filters.brand.length > 0) {
-      filters.brand.forEach((brand) => {
-        const updatedArray = array.filter((product) => {
-          return product.Brand === brand;
-        });
-        setFilteredProducts(updatedArray);
-      });
-    }
-    if (filters.size.length > 0) {
-      filters.size.forEach((size) => {
-        const updatedArray = array.filter((product) => {
-          return product.Size === size;
-        });
-        setFilteredProducts(updatedArray);
-      });
-    }
-    if (filters.gender.length > 0) {
-      filters.gender.forEach((gender) => {
-        const updatedArray = array.filter((product) => {
-          return product.Gender === gender;
-        });
-        setFilteredProducts(updatedArray);
-      });
-    }
+    let filteredArray = [];
+    //iterating over my products
+    products.forEach((product) => {
+      //now i have one product
+      let flag = 1; //flag to see if it passes all filters
+      if (filters.brand.length > 0) {
+        filters.brand.includes(product.Brand) && flag ? (flag = 1) : (flag = 0);
+      }
+      if (filters.size.length > 0) {
+        filters.size.includes(product.Size) && flag ? (flag = 1) : (flag = 0);
+      }
+      if (filters.gender.length > 0) {
+        filters.gender.includes(product.Gender) && flag
+          ? (flag = 1)
+          : (flag = 0);
+      }
+      if (flag === 1) {
+        filteredArray.push(product);
+      }
+    });
+    setFilteredProducts(filteredArray);
   };
 
   const resetFiltersHandler = () => {
@@ -122,7 +111,7 @@ function App() {
           <button onClick={handleSortLowToHigh}>Sort : Low to High</button>
         </div>
         {filteredProducts.length === 0 ? (
-          <Products products={products} />
+          <h1>NO PRODUCT FOUND</h1>
         ) : (
           <Products products={filteredProducts} />
         )}
