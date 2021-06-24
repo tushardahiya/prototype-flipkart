@@ -14,7 +14,7 @@ const Product = ({ details }) => {
       <p className="description">{details.Description}</p>
       <div className="product-info">
         <h6>Size : {details.Size} </h6>
-        <h6>Sex : {details.Sex}</h6>
+        <h6>Sex : {details.Gender}</h6>
         <h6> Price : {details.Price}</h6>
       </div>
     </div>
