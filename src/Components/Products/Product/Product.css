@@ -1,8 +1,8 @@
 .product-container {
   margin: 2px;
-  width: 250px;
-  height: 280px;
-  background-color: white;
+  width: 240px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .product-container img {
@@ -14,8 +14,9 @@
 }
 
 .product-container .title {
+  font-size: 0.8rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .product-container p {
@@ -32,7 +33,22 @@
 }
 
 .product-info h6 {
-  border: 1px solid grey;
-  padding: 4px;
+  padding: 5px;
   border-radius: 3px;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.product-container .price-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-container .price-container p {
+  margin-top: 5px;
+  background-color: #2874f0;
+  width: 50%;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
 }

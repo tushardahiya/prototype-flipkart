@@ -1,7 +1,9 @@
 .sidebar-container {
+  background-color: white;
+  margin: 10px;
   position: fixed;
   z-index: 1;
-  top: 10vh;
+  top: 50px;
   width: 250px;
   height: 90vh;
 }

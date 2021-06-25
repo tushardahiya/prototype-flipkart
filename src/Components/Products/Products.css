@@ -1,6 +1,6 @@
 .products-container {
   display: flex;
-  height: 100%;
-  justify-content: space-evenly;
+  background-color: white;
+  min-height: 80vh;
   flex-wrap: wrap;
 }
