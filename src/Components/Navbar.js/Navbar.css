@@ -1,32 +1,61 @@
 .navbar-container {
-  background-color: #4361ee;
+  background-color: #2874f0;
   position: fixed;
   top: 0;
   color: white;
   width: 100%;
-  height: 10vh;
+  height: 50px;
   display: flex;
   justify-content: space-between;
+}
+
+.left-container {
+  display: flex;
+  margin-top: 8px;
+  margin-left: 200px;
+}
+
+.right-container {
+  display: flex;
+  margin-right: 50px;
   align-items: center;
 }
 
-.navbar-container .heading {
-  margin: 20px;
+.left-container .logo {
+  width: 80px;
+  height: 90%;
+  margin-right: 20px;
 }
 
-.navbar-container input {
-  width: 40%;
-  height: 50%;
-  border-radius: 10px;
+.left-container .searchbar {
+  width: 400px;
+  height: 80%;
+}
+
+.searchbar input {
+  width: 85%;
+  height: 95%;
   border: none;
 }
 
-.navbar-container .signin {
-  margin-right: 30px;
-  height: 70%;
-  background-color: #3f37c9;
+.searchbar button {
+  width: 10%;
+  height: 100%;
+  border: none;
+}
+
+.left-container .logo img {
+  object-fit: fill;
+  width: 100%;
+}
+
+.right-container a {
+  text-decoration: none;
   color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+}
+
+.right-container img {
+  width: 30px;
+  margin-left: 40px;
+  fill: white;
 }
